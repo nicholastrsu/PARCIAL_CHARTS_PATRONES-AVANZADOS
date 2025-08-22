@@ -1,0 +1,10 @@
+replicaCount: 1
+
+image:
+  backend:
+    tag: "dev"
+  frontend:
+    tag: "dev"
+
+ingress:
+  host: dev.pedido.local

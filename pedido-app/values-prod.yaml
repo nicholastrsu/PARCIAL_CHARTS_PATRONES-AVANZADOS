@@ -1,0 +1,10 @@
+replicaCount: 3
+
+image:
+  backend:
+    tag: "prod"
+  frontend:
+    tag: "prod"
+
+ingress:
+  host: pedido.com

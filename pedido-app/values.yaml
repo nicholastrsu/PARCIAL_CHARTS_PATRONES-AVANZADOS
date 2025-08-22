@@ -1,0 +1,21 @@
+replicaCount: 2
+
+image:
+  backend:
+    repository: dani008/fastapi-backend
+    tag: "latest"
+  frontend:
+    repository: dani008/frontend
+    tag: "latest"
+
+service:
+  backend:
+    type: ClusterIP
+    port: 8080
+  frontend:
+    type: ClusterIP
+    port: 80
+
+ingress:
+  enabled: true
+  host: pedido.local
