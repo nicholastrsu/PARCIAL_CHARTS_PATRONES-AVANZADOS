@@ -4,3 +4,10 @@ description: Chart para desplegar la app de pedidos (frontend + backend)
 type: application
 version: 0.1.0
 appVersion: "1.0.0"
+
+
+
+dependencies:
+  - name: postgresql
+    version: 15.5.22
+    repository: https://charts.bitnami.com/bitnami
