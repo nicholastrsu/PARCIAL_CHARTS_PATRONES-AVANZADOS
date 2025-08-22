@@ -3,10 +3,10 @@ replicaCount: 2
 image:
   backend:
     repository: dani008/fastapi-backend
-    tag: "latest"
+    tag: "1.0.0"
   frontend:
     repository: dani008/frontend
-    tag: "latest"
+    tag: "1.0.0"
 
 service:
   backend:
@@ -19,3 +19,10 @@ service:
 ingress:
   enabled: true
   host: pedido.local
+
+postgresql:
+  enabled: true
+  auth:
+    username: patrones_1parcial
+    password: parcial1
+    database: patrones
