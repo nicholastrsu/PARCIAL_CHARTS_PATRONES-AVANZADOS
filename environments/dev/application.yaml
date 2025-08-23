@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Tw3kda/PARCIAL_CHARTS_PATRONES-AVANZADOS.git   # cambia con tu repo real
+    repoURL: https://github.com/Tw3kda/PARCIAL_CHARTS_PATRONES-AVANZADOS.git
     targetRevision: HEAD
     path: pedido-app
     helm:
@@ -17,8 +17,9 @@ spec:
     server: https://kubernetes.default.svc
     namespace: pedido-dev
   syncPolicy:
-    automated:             # ArgoCD sincroniza automáticamente
-      prune: true          # elimina recursos obsoletos
-      selfHeal: true       # corrige drift
+    automated:
+      prune: true
+      selfHeal: true
     syncOptions:
       - CreateNamespace=true
+      - HelmDependencyUpdate=true   # 👈 fuerza a ArgoCD a hacer `helm dependency update`
