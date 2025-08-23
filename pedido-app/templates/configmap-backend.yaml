@@ -4,7 +4,7 @@ metadata:
   name: backend-config
 data:
   DB_NAME: {{ .Values.postgresql.auth.database | quote }}
-  DB_HOST: "{{ .Release.Name }}-postgresql"
+  DB_HOST: "pedido-app-prod-postgresql"
   DB_PORT: "5432"
   DATABASE_URL: "postgresql://$(DB_USER):$(DB_PASSWORD)@{{ .Release.Name }}-postgresql:5432/{{ .Values.postgresql.auth.database }}"
 
