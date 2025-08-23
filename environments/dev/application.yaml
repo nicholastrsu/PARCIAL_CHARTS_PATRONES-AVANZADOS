@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/Tw3kda/PARCIAL_CHARTS_PATRONES-AVANZADOS.git
+    repoURL: https://tw3kda.github.io/PARCIAL_CHARTS_PATRONES-AVANZADOS/
     targetRevision: HEAD
     path: pedido-app 
     helm:
