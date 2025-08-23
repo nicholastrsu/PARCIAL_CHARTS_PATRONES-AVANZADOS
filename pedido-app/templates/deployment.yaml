@@ -24,7 +24,22 @@ spec:
             - containerPort: {{ .Values.service.backend.port }}
           env:
             - name: DB_NAME
-              value: {{ .Values.postgresql.auth.database | quote }}
+              valueFrom:
+                configMapKeyRef:
+                  name: backend-config
+                  key: DB_NAME
+
+            - name: DB_HOST
+              valueFrom:
+                configMapKeyRef:
+                  name: backend-config
+                  key: DB_HOST
+
+            - name: DB_PORT
+              valueFrom:
+                configMapKeyRef:
+                  name: backend-config
+                  key: DB_PORT
 
             - name: DB_USER
               valueFrom:
@@ -38,14 +53,9 @@ spec:
                   name: postgres
                   key: POSTGRES_PASSWORD
 
-            - name: DB_HOST
-              value: "{{ .Release.Name }}-postgresql"
-
-            - name: DB_PORT
-              value: "5432"
-
             - name: DATABASE_URL
-              value: "postgresql://$(DB_USER):$(DB_PASSWORD)@{{ .Release.Name }}-postgresql:5432/{{ .Values.postgresql.auth.database }}"
+              value: "postgresql://$(DB_USER):$(DB_PASSWORD)@$(DB_HOST):$(DB_PORT)/$(DB_NAME)"
+
 
           resources:
             requests:

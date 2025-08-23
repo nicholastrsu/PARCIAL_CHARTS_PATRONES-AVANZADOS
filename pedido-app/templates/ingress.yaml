@@ -4,11 +4,29 @@ kind: Ingress
 metadata:
   name: pedido-ingress
   annotations:
-    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  ingressClassName: nginx
   rules:
     - host: {{ .Values.ingress.host }}
       http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: backend
+                port:
+                  number: {{ .Values.service.backend.port }}
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend
+                port:
+                  number: {{ .Values.service.frontend.port }}
+    # Regla adicional: aceptar tráfico directo por IP (sin host)
+    - http:
         paths:
           - path: /api
             pathType: Prefix

@@ -2,9 +2,36 @@ replicaCount: 1
 
 image:
   backend:
-    tag: "dev"
+    repository: dani008/fastapi-backend
+    tag: "1.0.0"
   frontend:
-    tag: "dev"
+    repository: dani008/frontend
+    tag: "1.0.0"
+
+service:
+  backend:
+    type: ClusterIP
+    port: 8080
+  frontend:
+    type: ClusterIP
+    port: 80
 
 ingress:
   host: dev.pedido.local
+
+resources:
+  backend:
+    requests:
+      cpu: "100m"
+      memory: "256Mi"
+    limits:
+      cpu: "500m"
+      memory: "512Mi"
+
+  frontend:
+    requests:
+      cpu: "50m"
+      memory: "128Mi"
+    limits:
+      cpu: "250m"
+      memory: "256Mi"

@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+  namespace: pedido-dev
+data:
+  DB_NAME: {{ .Values.postgresql.auth.database | quote }}
+  DB_HOST: "{{ .Release.Name }}-postgresql"
+  DB_PORT: "5432"

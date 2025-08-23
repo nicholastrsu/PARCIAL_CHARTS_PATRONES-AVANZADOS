@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: backend-config
+data:
+  DB_HOST: "pedido-app-postgresql"
+  DB_NAME: "patrones"
+  DB_PORT: "5432"
+  DATABASE_URL: "postgresql://$(DB_USER):$(DB_PASSWORD)@pedido-app-postgresql:5432/patrones"
+
