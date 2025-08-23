@@ -25,4 +25,5 @@ postgresql:
   auth:
     username: patrones_1parcial
     password: parcial1
+    postgresPassword: parcial1
     database: patrones
