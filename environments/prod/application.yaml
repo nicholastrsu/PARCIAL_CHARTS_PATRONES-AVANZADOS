@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/Tw3kda/PARCIAL_CHARTS_PATRONES-AVANZADOS.git
     targetRevision: HEAD
-    path: pedido-app
+    path: .
     helm:
       valueFiles:
         - values.yaml
