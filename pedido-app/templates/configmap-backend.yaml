@@ -6,4 +6,5 @@ data:
   DB_NAME: {{ .Values.postgresql.auth.database | quote }}
   DB_HOST: "{{ .Release.Name }}-postgresql"
   DB_PORT: "5432"
-  DATABASE_URL: "postgresql://$(DB_USER):$(DB_PASSWORD)@pedido-app-postgresql:5432/patrones"
+  DATABASE_URL: "postgresql://$(DB_USER):$(DB_PASSWORD)@{{ .Release.Name }}-postgresql:5432/{{ .Values.postgresql.auth.database }}"
+
