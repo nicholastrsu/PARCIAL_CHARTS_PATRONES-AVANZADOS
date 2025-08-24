@@ -1,0 +1,45 @@
+apiVersion: v1
+entries:
+  postgresql:
+  - annotations:
+      category: Database
+      images: |
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:12-debian-12-r27
+        - name: postgres-exporter
+          image: docker.io/bitnami/postgres-exporter:0.15.0-debian-12-r39
+        - name: postgresql
+          image: docker.io/bitnami/postgresql:16.4.0-debian-12-r1
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 16.4.0
+    created: "2025-08-23T19:56:00.058665-05:00"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: PostgreSQL (Postgres) is an open source object-relational database
+      known for reliability and data integrity. ACID-compliant, it supports foreign
+      keys, joins, views, triggers and stored procedures.
+    digest: 7a0c84d42bdd0f08f99bdfe83cc002be81b9cf8aeba491aa0e7547f492cd4c43
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
+    keywords:
+    - postgresql
+    - postgres
+    - database
+    - sql
+    - replication
+    - cluster
+    maintainers:
+    - name: Broadcom, Inc. All Rights Reserved.
+      url: https://github.com/bitnami/charts
+    name: postgresql
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/postgresql
+    urls:
+    - https://tw3kda.github.io/PARCIAL_CHARTS_PATRONES-AVANZADOS/charts/postgresql-15.5.22.tgz
+    version: 15.5.22
+generated: "2025-08-23T19:56:00.0550376-05:00"
