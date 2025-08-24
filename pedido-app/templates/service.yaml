@@ -1,3 +1,4 @@
+{{- /* Service para el backend */ -}}
 apiVersion: v1
 kind: Service
 metadata:
@@ -5,10 +6,27 @@ metadata:
   labels:
     app: backend
 spec:
-  type: ClusterIP
+  type: {{ $.Values.service.backend.type | default "ClusterIP" }}
   selector:
     app: backend
   ports:
-    - port: 80          # Puerto que expondrá el Service
-      targetPort: 8080  # Puerto del contenedor del backend
+    - port: {{ $.Values.service.backend.port | default 8080 }}
+      targetPort: 8080
+      protocol: TCP
+
+---
+{{- /* Service para el frontend */ -}}
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+  labels:
+    app: frontend
+spec:
+  type: {{ $.Values.service.frontend.type | default "ClusterIP" }}
+  selector:
+    app: frontend
+  ports:
+    - port: {{ $.Values.service.frontend.port | default 80 }}
+      targetPort: 80
       protocol: TCP
