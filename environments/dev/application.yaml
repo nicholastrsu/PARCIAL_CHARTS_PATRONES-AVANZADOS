@@ -6,10 +6,12 @@ metadata:
 spec:
   project: default
   source:
+    # Apunta al repositorio de Git (la "fábrica")
     repoURL: https://github.com/nicholastrsu/PARCIAL_CHARTS_PATRONES-AVANZADOS.git
-    chart: pedido-app
+    # Usa siempre el último commit de la rama principal
     targetRevision: HEAD
-    path: pedido-app 
+    # La ruta a la carpeta que contiene el Chart.yaml
+    path: pedido-app
     helm:
       valueFiles:
         - values.yaml
@@ -23,4 +25,3 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
-      - HelmDependencyUpdate=true   # 👈 fuerza a ArgoCD a hacer `helm dependency update`

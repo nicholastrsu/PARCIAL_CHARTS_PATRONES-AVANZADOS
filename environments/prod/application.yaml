@@ -6,10 +6,12 @@ metadata:
 spec:
   project: default
   source:
+    
     repoURL: https://github.com/nicholastrsu/PARCIAL_CHARTS_PATRONES-AVANZADOS.git
-    chart: pedido-app
+    
     targetRevision: HEAD
-    path: pedido-app 
+    
+    path: pedido-app
     helm:
       valueFiles:
         - values.yaml
@@ -23,4 +25,3 @@ spec:
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
-      - HelmDependencyUpdate=true
