@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://nicholastrsu.github.io/PARCIAL_CHARTS_PATRONES-AVANZADOS
+    repoURL: https://github.com/nicholastrsu/PARCIAL_CHARTS_PATRONES-AVANZADOS.git
     chart: pedido-app
-    targetRevision: 0.3.4 
+    targetRevision: HEAD
     path: pedido-app 
     helm:
       valueFiles:
