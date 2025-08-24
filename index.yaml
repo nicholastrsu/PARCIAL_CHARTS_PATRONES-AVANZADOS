@@ -3,13 +3,13 @@ entries:
   pedido-app:
   - apiVersion: v2
     appVersion: 2.0.0
-    created: "2025-08-23T16:51:09.0825731-05:00"
+    created: "2025-08-23T19:31:16.5572042-05:00"
     dependencies:
     - name: postgresql
       repository: https://charts.bitnami.com/bitnami
       version: 15.5.22
     description: Chart para desplegar la app de pedidos (frontend + backend)
-    digest: 4e7873224d458159f3e2e3d01fabe4a5b69fa2c42331801f9ade82a3b5d7b2c3
+    digest: 43a97e399c35e413ae048f6afceb6de1f50edf43f02e090801a6075aca696a59
     name: pedido-app
     type: application
     urls:
@@ -17,7 +17,7 @@ entries:
     version: 0.3.1
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-08-23T16:51:09.0772793-05:00"
+    created: "2025-08-23T19:31:16.5536176-05:00"
     dependencies:
     - name: postgresql
       repository: https://charts.bitnami.com/bitnami
@@ -29,4 +29,4 @@ entries:
     urls:
     - https://tw3kda.github.io/PARCIAL_CHARTS_PATRONES-AVANZADOS/pedido-app-0.1.0.tgz
     version: 0.1.0
-generated: "2025-08-23T16:51:09.0730384-05:00"
+generated: "2025-08-23T19:31:16.5510597-05:00"
