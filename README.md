@@ -3,6 +3,9 @@
 
 Este repo es un fork del repo origianl el cual es : https://github.com/Tw3kda/PARCIAL_1_PATRONES-AVANZADOS.git
 
+Repositorio para desplegar **Pedido App** en Kubernetes usando **Helm** (manual) o **ArgoCD** (GitOps).  
+Incluye **frontend**, **backend (FastAPI)**, **PostgreSQL (Bitnami)**, **Ingress (nginx)** y **HPA** para el backend.
+
 aun asi con este repo se esta manejando la conexion en los .yaml
 
 este el repo del front y back:
@@ -11,8 +14,7 @@ https://github.com/Tw3kda/PARCIAL_1_PATRONES-AVANZADOS.git
 
 
 
-Repositorio para desplegar **Pedido App** en Kubernetes usando **Helm** (manual) o **ArgoCD** (GitOps).  
-Incluye **frontend**, **backend (FastAPI)**, **PostgreSQL (Bitnami)**, **Ingress (nginx)** y **HPA** para el backend.
+
 
 ---
 
