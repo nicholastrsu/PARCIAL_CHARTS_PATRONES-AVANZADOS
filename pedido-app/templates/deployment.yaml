@@ -93,7 +93,7 @@ spec:
             - containerPort: {{ .Values.service.frontend.port }}
           env:
             - name: API_URL
-              value: "http://backend:{{ .Values.service.backend.port }}"
+              value: "http://{{ .Values.ingress.host }}/api"
 
           resources:
             requests:
