@@ -1,3 +1,8 @@
+# Integrantes:
+
+Daniel Santiago Ramirez - Jacobo Pacheco - Nicholas Triana - Santiago Navarro Cuy
+
+
 # Pedido App – Helm Chart + ArgoCD (Frontend + Backend + PostgreSQL)
 
 
