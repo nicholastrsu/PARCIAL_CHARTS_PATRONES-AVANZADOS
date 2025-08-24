@@ -2,9 +2,9 @@ replicaCount: 3
 
 image:
   backend:
-    tag: "prod"
+    tag: "1.0.0"
   frontend:
-    tag: "prod"
+    tag: "1.0.0"
 
 ingress:
   host: pedido.com
